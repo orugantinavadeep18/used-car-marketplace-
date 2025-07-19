@@ -11,6 +11,9 @@ const firebaseConfig = {
   measurementId: "G-66XWH0434M"
 };
 const app = initializeApp(firebaseConfig);
+const provider = new GoogleAuthProvider();
+signInWithPopup(auth, provider)
+
 
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
