@@ -25,7 +25,6 @@ const CarSearchBox = () => {
 
   const handleSellNext = () => {
     if (formData.registration && formData.name && formData.mobile) {
-      // You could store formData in a context or pass via state
       navigate("/sell-car-details", { state: formData });
     } else {
       alert("Please fill all required fields.");
@@ -33,7 +32,7 @@ const CarSearchBox = () => {
   };
 
   return (
-    <div className="relative top-7 w-[100vw] max-w-6xl mx-auto">
+    <div className="hidden md:block relative top-7 w-[100vw] max-w-6xl mx-auto">
       {/* Tabs */}
       <div className="absolute -top-6 left-6 flex space-x-0 z-50">
         <div className="relative">

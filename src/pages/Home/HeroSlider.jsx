@@ -59,52 +59,53 @@ const Heroslider = () => {
   };
 
   return (
-    <div className="relative w-full h-[calc(100vh-72px)]">
-      <Slider ref={sliderRef} {...settings} className="h-full">
-        {slides.map((slide, index) => (
-          <div key={index} className={`h-[calc(100vh-72px)] bg-gradient-to-b ${slide.bgColor}`}>
-            <div className="flex flex-wrap items-center justify-between px-8 lg:px-20 py-10 h-full">
-              {/* Left: Text */}
-              <div className="w-full md:w-1/2 text-white space-y-6">
-                <h4 className="uppercase tracking-widest text-lg">Welcome to Online Shop</h4>
-                <h1 className="text-5xl font-extrabold leading-tight">
-                  Best Way to Find <br />
-                  Your <span className="text-blue-500">Journey</span>
-                </h1>
-                <p className="text-xl font-medium max-w-xl leading-relaxed">
-                  “{slide.quote}”
-                </p>
-              </div>
-
-              {/* Right: Car Image */}
-              <div className="w-full md:w-1/2 flex justify-center mt-10 md:mt-0">
-                <img
-                  src={slide.car}
-                  alt={`car-${index}`}
-                  className="h-[28rem] md:h-[32rem] object-contain drop-shadow-2xl"
-                />
-              </div>
-            </div>
+  <div className="relative w-full h-[calc(100vh-72px)]">
+  <Slider ref={sliderRef} {...settings} className="h-full">
+    {slides.map((slide, index) => (
+      <div key={index} className={`h-[calc(100vh-72px)] bg-gradient-to-b ${slide.bgColor}`}>
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 py-10 h-full gap-6">
+          
+          {/* Left: Text */}
+          <div className="w-full md:w-1/2 text-white space-y-4 text-center md:text-left">
+            <h4 className="uppercase tracking-widest text-sm md:text-lg">Welcome to Online Shop</h4>
+            <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">
+              Best Way to Find <br />
+              Your <span className="text-blue-500">Journey</span>
+            </h1>
+            <p className="text-base md:text-xl font-medium leading-relaxed max-w-xl mx-auto md:mx-0">
+              “{slide.quote}”
+            </p>
           </div>
-        ))}
-      </Slider>
 
-      {/* Custom Left Arrow */}
-      <button
-        onClick={() => sliderRef.current?.slickPrev()}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-indigo-800 p-3 rounded text-white text-2xl z-30 hover:bg-indigo-700"
-      >
-        <AiOutlineLeft />
-      </button>
+          {/* Right: Car Image */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <img
+              src={slide.car}
+              alt={`car-${index}`}
+              className="w-[85%] md:w-[32rem] h-auto object-contain drop-shadow-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    ))}
+  </Slider>
 
-      {/* Custom Right Arrow */}
-      <button
-        onClick={() => sliderRef.current?.slickNext()}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-indigo-800 p-3 rounded text-white text-2xl z-30 hover:bg-indigo-700"
-      >
-        <AiOutlineRight />
-      </button>
-    </div>
+  {/* Left Arrow */}
+  <button
+    onClick={() => sliderRef.current?.slickPrev()}
+    className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-indigo-800 p-2 md:p-3 rounded-full text-white text-lg md:text-2xl z-30 hover:bg-indigo-700"
+  >
+    <AiOutlineLeft />
+  </button>
+
+  {/* Right Arrow */}
+  <button
+    onClick={() => sliderRef.current?.slickNext()}
+    className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-indigo-800 p-2 md:p-3 rounded-full text-white text-lg md:text-2xl z-30 hover:bg-indigo-700"
+  >
+    <AiOutlineRight />
+  </button>
+</div>
   );
 };
 

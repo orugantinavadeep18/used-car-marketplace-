@@ -42,7 +42,7 @@ const Navbar = () => {
     <nav className="w-full flex flex-wrap items-center justify-between bg-gradient-to-r from-black via-gray-600 to-gray-800 px-4 sm:px-6 lg:px-8 py-3 z-10">
       {/* Logo */}
       <div className="flex items-center gap-2">
-        <img src={free} alt="logo" className="h-12 sm:h-16" />
+        <img src="https://cdn-icons-png.flaticon.com/512/9469/9469627.png" alt="logo" className="h-10 sm:h-14" />
         <h1 className="text-2xl sm:text-3xl text-white font-bold">Vehicle Verse</h1>
       </div>
 

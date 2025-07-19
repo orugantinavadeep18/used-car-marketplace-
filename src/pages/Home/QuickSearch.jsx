@@ -70,24 +70,27 @@ const QuickSearch = () => {
     nextArrow: <Arrow direction="right" />,
     prevArrow: <Arrow direction="left" />,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 4 } },
-      { breakpoint: 768, settings: { slidesToShow: 3 } },
-      { breakpoint: 480, settings: { slidesToShow: 2 } },
+      { breakpoint: 1280, settings: { slidesToShow: 4 } },
+      { breakpoint: 1024, settings: { slidesToShow: 3 } },
+      { breakpoint: 768, settings: { slidesToShow: 2 } },
+      { breakpoint: 480, settings: { slidesToShow: 1 } },
     ],
   };
 
   return (
     <div
-      className="container bg-no-repeat bg-cover w-full h-screen mx-auto px-4 py-8"
+      className="w-full h-auto px-4 py-6 md:px-10 md:py-10 bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${img})` }}
     >
-      <h2 className="text-3xl font-bold text-white mb-6">Quick Search</h2>
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6 text-center md:text-left">
+        Quick Search
+      </h2>
 
       {/* Tabs */}
-      <div className="flex gap-4 mb-6">
+      <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-6">
         <button
           onClick={() => setActiveTab("model")}
-          className={`px-5 py-2 rounded-full font-bold ${
+          className={`px-4 sm:px-5 py-1.5 sm:py-2 rounded-full font-semibold text-sm sm:text-base ${
             activeTab === "model"
               ? "bg-blue-800 text-white"
               : "border border-white text-white"
@@ -97,7 +100,7 @@ const QuickSearch = () => {
         </button>
         <button
           onClick={() => setActiveTab("budget")}
-          className={`px-5 py-2 rounded-full font-semibold ${
+          className={`px-4 sm:px-5 py-1.5 sm:py-2 rounded-full font-semibold text-sm sm:text-base ${
             activeTab === "budget"
               ? "bg-blue-800 text-white"
               : "border border-white text-white"
@@ -111,17 +114,17 @@ const QuickSearch = () => {
       {activeTab === "model" ? (
         <Slider {...settings}>
           {carModels.map((car, index) => (
-            <div key={index} className="p-3">
+            <div key={index} className="p-2 sm:p-3">
               <Link
                 to="/coming-soon"
-                className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-xl"
+                className="bg-white rounded-xl shadow-md p-3 sm:p-4 flex flex-col items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-xl"
               >
                 <img
                   src={car.image}
                   alt={car.name}
-                  className="w-28 h-20 object-contain mb-2 bg-transparent"
+                  className="w-20 h-16 sm:w-28 sm:h-20 object-contain mb-2"
                 />
-                <span className="font-medium text-gray-800 text-sm text-center">
+                <span className="font-medium text-gray-800 text-xs sm:text-sm text-center">
                   {car.name}
                 </span>
               </Link>
@@ -129,13 +132,13 @@ const QuickSearch = () => {
           ))}
         </Slider>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
           {["Less than ₹2L", "₹2L - ₹4L", "₹4L - ₹6L", "More than ₹6L"].map(
             (range, idx) => (
               <Link
                 to="/coming-soon"
                 key={idx}
-                className="bg-gray-100 hover:bg-gray-200 hover:scale-105 hover:shadow-xl transform transition-all duration-300 p-6 text-center rounded-xl font-semibold text-lg text-gray-700"
+                className="bg-gray-100 hover:bg-gray-200 hover:scale-105 hover:shadow-xl transform transition-all duration-300 p-4 sm:p-6 text-center rounded-xl font-semibold text-sm sm:text-lg text-gray-700"
               >
                 {range}
               </Link>
@@ -145,6 +148,6 @@ const QuickSearch = () => {
       )}
     </div>
   );
-};
+}
 
 export default QuickSearch;

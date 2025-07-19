@@ -31,9 +31,9 @@ const Home=()=>{
           style={{ backgroundImage: `url(${img})` }}
           >
          <QuickSearch embedded />
-         <h1 className="text-white text-7xl font-serif absolute top-300">Select Your Dream Car </h1>
+         {/* <h1 className="text-white text-7xl font-serif absolute top-300">Select Your Dream Car </h1>
            <p className="text-white text-4xl right-220 absolute top-320">Everything in life is somewhere else,</p> 
-            <p className="text-white text-4xl font-sans absolute right-260 top-330">and you get there in a car</p>
+            <p className="text-white text-4xl font-sans absolute right-260 top-330">and you get there in a car</p> */}
          <CarTabs embedded />
        </div>
        {/* <div>
