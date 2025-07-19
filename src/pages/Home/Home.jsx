@@ -18,8 +18,6 @@ const Home = () => {
   return (
     <>
       <Contact />
-{/* <<<<<<< HEAD */}
-{/* >>>>>>> 6c10a98 (Updated Home.jsx for better UI/responsiveness) */}
       <Navbar />
       <HeroSlider />
 
@@ -50,13 +48,7 @@ const Home = () => {
           <CarTabs embedded />
         </div>
       </div>
-
-       {/* <<<<<<< HEAD */}
-      
-{/* ======= */}
-     
-      {/* >>>>>>> 6c10a98 (Updated Home.jsx for better UI/responsiveness) */}
-      <Footer />
+         <Footer />
     </>
   );
 };
