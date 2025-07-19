@@ -67,9 +67,10 @@ const Heroslider = () => {
             key={index}
             className={`h-[calc(100vh-72px)] bg-gradient-to-b ${slide.bgColor}`}
           >
-            <div className="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 py-10 h-full gap-6">
+         <div className="flex flex-col-reverse md:flex-row items-center justify-center px-4 md:px-20 py-6 md:py-12 gap-2 md:gap-6 h-full">
               {/* Left: Text */}
-              <div className="w-full md:w-1/2 text-white space-y-4 text-center md:text-left">
+              <div className="w-full md:w-1/2 text-white text-center md:text-left space-y-3 md:space-y-6 px-2 md:px-0">
+
                 <h4 className="uppercase tracking-widest text-sm md:text-lg">
                   Welcome to Online Shop
                 </h4>
