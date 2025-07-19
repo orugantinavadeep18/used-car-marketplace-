@@ -17,6 +17,8 @@ import Contact from "../Contact";
 const Home = () => {
   return (
     <>
+      <Contact />
+    
       <Navbar />
       <HeroSlider />
 
@@ -48,7 +50,7 @@ const Home = () => {
         </div>
       </div>
 
-      <Contact />
+      
       <Footer />
     </>
   );
