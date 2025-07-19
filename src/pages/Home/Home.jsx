@@ -14,42 +14,45 @@ import TestimonialsSlider from "../TestmonialsSlider";
 import Contact from "../Contact";
 
 
-const Home = () => {
-  return (
-    <>
-      <Contact />
-      <Navbar />
-      <HeroSlider />
+const Home=()=>{
+    return(
+       
+        <>
+         <Contact/>
+        <Navbar/>
+         <HeroSlider />
+         <div className="absolute right-60 top-120 inset-0 flex items-center justify-center">
+           <CarSearchBox />
+         </div>
+        
+          
+        <div
+         className="bg-no-repeat bg-cover w-full min-h-screen px-4 py-8"
+          style={{ backgroundImage: `url(${img})` }}
+          >
+         <QuickSearch embedded />
+         <h1 className="text-white text-7xl font-serif absolute top-300">Select Your Dream Car </h1>
+           <p className="text-white text-4xl right-220 absolute top-320">Everything in life is somewhere else,</p> 
+            <p className="text-white text-4xl font-sans absolute right-260 top-330">and you get there in a car</p>
+         <CarTabs embedded />
+       </div>
+       {/* <div>
+        <TestimonialsSlider/>
+       </div> */}
+         <div>
+          <Footer/>
+         </div>
+         
 
-      {/* Responsive search-box overlay */}
-      <div className="relative z-10 px-4 sm:px-8 md:px-16 lg:px-32 -mt-20">
-        <CarSearchBox />
-      </div>
-
-      {/* Hero background section */}
-      <div
-        className="w-full min-h-screen bg-no-repeat bg-cover py-16 px-4 sm:px-8 md:px-16 lg:px-32 relative"
-        style={{ backgroundImage: `url(${img})` }}
-      >
-        <div className="max-w-4xl mx-auto text-center text-white space-y-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold">
-            Select Your Dream Car
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl">
-            Everything in life is somewhere else,
-          </p>
-          <p className="text-lg sm:text-xl md:text-2xl font-sans">
-            and you get there in a car
-          </p>
-        </div>
-
-        <div className="mt-12 px-4 sm:px-0">
-          <QuickSearch embedded />
-          <CarTabs embedded />
-        </div>
-      </div>
-         <Footer />
-    </>
-  );
-};
+         
+        {/* <div className="w-full min-h-[850px] pt-[70px] overflow-hidden bg-[#f0f2f3] flex items-center justify-center ">
+        
+        </div> */}
+        {/* <div className="min-h-screen size-11  bg-gray-100 flex justify-center items-center">
+        
+        </div> */}
+         
+        </>
+    )
+}
 export default Home
