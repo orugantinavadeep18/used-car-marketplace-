@@ -19,8 +19,6 @@ const Home = () => {
     <>
       <Contact />
 {/* <<<<<<< HEAD */}
-    
-=======
 {/* >>>>>>> 6c10a98 (Updated Home.jsx for better UI/responsiveness) */}
       <Navbar />
       <HeroSlider />
