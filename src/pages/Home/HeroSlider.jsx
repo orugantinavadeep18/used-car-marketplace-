@@ -84,11 +84,12 @@ const Heroslider = () => {
 
               {/* Right: Car Image */}
               <div className="w-full md:w-1/2 flex justify-center">
-                <img
-                  src={slide.car}
-                  alt={`car-${index}`}
-                  className="w-[85%] md:w-[32rem] h-auto object-contain drop-shadow-2xl"
-                />
+               <img
+              src={slide.car}
+            alt={`car-${index}`}
+              className="w-[80%] sm:w-[90%] md:w-[32rem] h-auto object-contain drop-shadow-2xl"
+              />
+
               </div>
             </div>
           </div>
